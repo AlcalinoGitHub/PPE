@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Retroalimentacion</h1>
+    <div class = 'text'>Aqui puedes hacernos sugerencias sobre lo que te gusta o no te gusta del PPE</div> <br>
+    <div class = 'encuesta'>
+        <form method="post"> 
+            {% csrf_token %}
+            <input type="text" name = 'Title' placeholder="Un titulo para tu sugerencia" required><br>
+            <textarea name = 'description' placeholder="Danos más detalles aquí" required></textarea><br>
+            indica tu grado (opcional) <br>
+            <input type = 'radio' name = 'grado' value = '2'> 2do semestre <br>
+            <input type = 'radio' name = 'grado' value = '4'> 4to semestre <br>
+            <input type = 'radio' name = 'grado' value = '6'> 6to semestre <br> <br>
+            ¿Quieres recibir una respuesta? <br> danos tu email! (opcional) <br>
+            <input type = 'email' name = 'email'> <br>
+            <input type = 'submit'>
+        </form>
+    </div>
+    
+</body>
+</html>

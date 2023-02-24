@@ -121,7 +121,7 @@ import os
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'MainPage', 'static')
+    os.path.join(BASE_DIR, 'mysite', 'static')
 ]
 
 # Default primary key field type

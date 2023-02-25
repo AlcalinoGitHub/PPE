@@ -8,7 +8,7 @@ def Propuestas(request):
     return render(request, 'propuestas.html')
 
 def about(request):
-    return HttpResponse('About')
+    return render(request,'about.html')
 
 def feedback(request):
     if request.method == 'POST':

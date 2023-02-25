@@ -5,24 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/static/encuesta.css">
 </head>
 <body>
-    <h1>Retroalimentacion</h1>
-    <div class = 'text'>Aqui puedes hacernos sugerencias sobre lo que te gusta o no te gusta del PPE</div> <br>
-    <div class = 'encuesta'>
-        <form method="post"> 
-            {% csrf_token %}
-            <input type="text" name = 'Title' placeholder="Un titulo para tu sugerencia" required><br>
-            <textarea name = 'description' placeholder="Danos más detalles aquí" required></textarea><br>
-            indica tu grado (opcional) <br>
-            <input type = 'radio' name = 'grado' value = 2> 2do semestre <br>
-            <input type = 'radio' name = 'grado' value = 4> 4to semestre <br>
-            <input type = 'radio' name = 'grado' value = 6> 6to semestre <br> <br>
-            ¿Quieres recibir una respuesta? <br> danos tu email! (opcional) <br>
-            <input type = 'email' name = 'email'> <br>
-            <input type = 'submit'>
+    <img class ='logo' src= "/static/L1Hs5S9N_2x.jpg" onclick="location.href = '/'">
+    <h1 class = 'title'>Retroalimentacion</h1>
+    <div class = 'text'>Aqui puedes dejar tus sugerencias para el PPE</div> <br>
+        <form method="post" class = 'leform'> 
+                {% csrf_token %}
+                <input type="text" name = 'Title' placeholder="Un titulo para tu sugerencia" required><br>
+                <textarea rows="5" cols="30" name = 'description' placeholder="Danos más detalles aquí" required></textarea><br>
+                Indica tu grado (opcional) <br>
+                <input type = 'radio' name = 'grado' value = 2> 2do semestre <br>
+                <input type = 'radio' name = 'grado' value = 4> 4to semestre <br>
+                <input type = 'radio' name = 'grado' value = 6> 6to semestre <br> <br>
+                ¿Quieres recibir una respuesta? <br> danos tu email! (opcional) <br>
+                <input type = 'email' name = 'email'> <br>
+                <input type = 'submit'>
         </form>
-    </div>
     
 </body>
 </html>

@@ -17,6 +17,14 @@ def feedback(request):
         Description = request.POST.get('description')
         Grade = None
         email = None
+
+        if CorrectWording(Title) is not None:
+            messages.info(request, f'No se admiten palabras altisonantes')
+            return render(request, 'encuesta.html')
+        if CorrectWording(Description) is not None:
+            messages.info(request, f'No se admiten palabras altisonantes')
+            return render(request, 'encuesta.html')
+
         if request.POST.get('email') is not None: 
             email = request.POST.get('email')
         if request.POST.get('grado') is not None:
@@ -32,3 +40,13 @@ def feedback(request):
         NewProposal.save()
         messages.info(request, 'La sugerencia ha sido enviada!')
     return render(request, 'encuesta.html')
+
+
+def CorrectWording(texto):
+    altisonantes =  ["verga", "puto", "puta", "hijo de", "pinche", "chinga", "chinguen", "chingo"]
+    texto = texto.lower()
+    texto = texto.split(' ')
+    for i in altisonantes:
+        if i in texto:
+            return (i)
+    return None

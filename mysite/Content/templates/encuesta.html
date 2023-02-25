@@ -22,7 +22,10 @@
                 ¿Quieres recibir una respuesta? <br> danos tu email! (opcional) <br>
                 <input type = 'email' name = 'email'> <br>
                 <input type = 'submit'>
-        </form>
+        </form><br>
+    {% for i in messages %}
+    <div class = 'alert'>{{i}}</p></div>
+    {%endfor%}
     
 </body>
 </html>

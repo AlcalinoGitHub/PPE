@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Propuesta
+from django.contrib import messages
 
 # Create your views here.
 
@@ -20,6 +21,8 @@ def feedback(request):
             email = request.POST.get('email')
         if request.POST.get('grado') is not None:
             Grade = request.POST.get('grado')
+        else:
+            Grade = -1
         NewProposal = Propuesta.objects.create(
             Title = Title,
             Description = Description,
@@ -27,5 +30,5 @@ def feedback(request):
             Email = email
         )
         NewProposal.save()
-
+        messages.info(request, 'La sugerencia ha sido enviada!')
     return render(request, 'encuesta.html')

@@ -2,6 +2,12 @@ body {
     background: rgb(182,219,233);
 background: linear-gradient(90deg, rgba(182,219,233,1) 0%, rgba(158,204,153,1) 100%, rgba(148,152,154,1) 100%);
 }
+@keyframes hideAnimation {
+    to {
+        visibility: hidden;
+    }
+}
+
 
 @media all and (orientation: landscape){
     .logo {
@@ -50,6 +56,42 @@ background: linear-gradient(90deg, rgba(182,219,233,1) 0%, rgba(158,204,153,1) 1
         text-align: center;
         font-size: 1.5vw;
     }
+
+    .alert { 
+        background-color: aquamarine;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0px 0px 10px 1px;
+        width: fit-content;
+        font-size: 1.5vw;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+
+    }
+    .alert.hide {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        animation: none;
+      }
+      
+      /* create a keyframe animation that sets the 'hide' class after a delay */
+      @keyframes hide-after-delay {
+        from {
+          visibility: visible;
+          opacity: 1;
+        }
+        to {
+          visibility: hidden;
+          opacity: 0;
+        }
+      }
+      
+      /* apply the animation to the element */
+      .alert {
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+        animation: hide-after-delay 5s forwards;
+      }
 }
 
 
@@ -100,5 +142,43 @@ background: linear-gradient(90deg, rgba(182,219,233,1) 0%, rgba(158,204,153,1) 1
         text-align: center;
         font-size: 6vw;
     }
+    .alert {
+        transform: translateY(-550%);
+        background-color: aquamarine;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0px 0px 10px 1px;
+        width: fit-content;
+        font-size: 3vw;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .alert.hide {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        animation: none;
+      }
+      
+      /* create a keyframe animation that sets the 'hide' class after a delay */
+      @keyframes hide-after-delay {
+        from {
+          visibility: visible;
+          opacity: 1;
+        }
+        to {
+          visibility: hidden;
+          opacity: 0;
+        }
+      }
+      
+      /* apply the animation to the element */
+      .alert {
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+        animation: hide-after-delay 5s forwards;
+      }
+
+    
 }
 

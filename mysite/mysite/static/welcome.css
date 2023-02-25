@@ -117,7 +117,7 @@ body {
     .box {
         background-color: rgb(52, 117, 85);
         width: fit-content;
-        max-width: 70%;
+        max-width: 50%;
         margin: auto;
         padding: 5px;
         display: flex;

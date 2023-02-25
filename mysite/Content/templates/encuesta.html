@@ -10,7 +10,8 @@
 <body>
     <img class ='logo' src= "/static/L1Hs5S9N_2x.jpg" onclick="location.href = '/'">
     <h1 class = 'title'>Retroalimentacion</h1>
-    <div class = 'text'>Aqui puedes dejar tus sugerencias para el PPE</div> <br>
+    <div class = 'text'>Aqui puedes dejar tus sugerencias para el PPE<br>
+        </div>
         <form method="post" class = 'leform'> 
                 {% csrf_token %}
                 <input type="text" name = 'Title' placeholder="Un titulo para tu sugerencia" required><br>

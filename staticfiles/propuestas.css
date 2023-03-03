@@ -1,0 +1,146 @@
+body {
+    background: rgb(182,219,233);
+background: linear-gradient(90deg, rgba(182,219,233,1) 0%, rgba(158,204,153,1) 100%, rgba(148,152,154,1) 100%);
+}
+
+
+
+@media all and (orientation: landscape) {
+    h3 {
+        font-size: 3vw;
+    }
+    img {
+        margin: 20px;
+        max-height: 20vw;
+        max-width: 20vw;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        background-color: aliceblue;
+        margin: auto;
+        width: 70%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0px 0px 10px 1px;
+        transition: ease 250ms;
+    }
+
+
+    .enlace {
+        background-color: aquamarine;
+        font-size: large;
+        border-radius: 10px;
+        padding: 10px;
+        transition: ease 250ms;
+    }
+
+
+    .enlace:hover {
+        background-color: greenyellow;
+    }
+
+    p {
+        font-size: 2.1vw;
+        text-align: justify;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        margin: auto;
+        background-color: rgb(191, 248, 177);
+        width: fit-content;
+        padding: 10px;
+        font-size: 5.3vw;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px 1px;
+        margin-bottom: 70px;
+    }
+
+    .logo {
+        position: fixed;
+        width: 225px;
+        height: 225px;
+        transition: ease 0.5s;
+    }
+
+    .logo:hover {
+        filter: drop-shadow(0px 0px 20px black);
+    }
+}
+
+@media all and (orientation: portrait) {
+    img {
+        margin: 20px;
+        max-height: 40vw;
+        max-width: 40vw;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+    h3 {
+        font-size: 5vw;
+    }
+
+    .content {
+        background-color: aliceblue;
+        margin: auto;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0px 0px 10px 1px;
+        transition: ease 250ms;
+    }
+
+
+    .enlace {
+        background-color: aquamarine;
+        font-size: large;
+        border-radius: 10px;
+        padding: 10px;
+        transition: ease 250ms;
+    }
+
+
+    .enlace:hover {
+        background-color: greenyellow;
+    }
+
+    p {
+        font-size: 5.10vw;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        margin: auto;
+        background-color: rgb(191, 248, 177);
+        width: fit-content;
+        padding: 10px;
+        font-size: 5.3vw;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px 1px;
+        margin-bottom: 70px;
+    }
+
+    .logo {
+        position: fixed;
+        width: 125px;
+        height: 125px;
+        transition: ease 0.5s;
+        animation-iteration-count: 2
+    }
+
+    .logo:defined {
+        filter: drop-shadow(0px 0px 20px black);
+    }
+}

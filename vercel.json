@@ -23,6 +23,11 @@
         "src": "/(.*)",
         "dest": "mysite/wsgi.py"
       }
-      
-    ]
+    ],
+    "build": {
+      "env": {
+        "DJANGO_SETTINGS_MODULE": "myproject.settings.production"
+      },
+      "command": "python manage.py collectstatic --noinput --clear && python manage.py compress --force && python manage.py collectstatic --noinput --clear --verbosity 0 --ignore '.DS_Store' --ignore '*.scss' --ignore '*.sass' --ignore '*.less' --ignore '*.coffee' --ignore '*.js.map' --ignore '*.ts' --ignore '*.ts.map' --ignore '*.jsx' --ignore '*.tsx' --ignore '*.jsx.map' --ignore '*.tsx.map' --ignore '*.vue' --ignore '*.vue.map' && python manage.py collectstatic --noinput --verbosity 0 --ignore '.DS_Store' --ignore '*.scss' --ignore '*.sass' --ignore '*.less' --ignore '*.coffee' --ignore '*.js.map' --ignore '*.ts' --ignore '*.ts.map' --ignore '*.jsx' --ignore '*.tsx' --ignore '*.jsx.map' --ignore '*.tsx.map' --ignore '*.vue' --ignore '*.vue.map' && mkdir -p staticfiles_build && cp -r staticfiles/* staticfiles_build && cp -r assets staticfiles_build && cd staticfiles_build && find . -name '*.map' -type f -delete && find . -name '*.scss' -type f -delete && find . -name '*.sass' -type f -delete && find . -name '*.less' -type f -delete && find . -name '*.coffee' -type f -delete && find . -name '*.ts' -type f -delete && find . -name '*.js' -type f -delete && find . -name '*.css' -type f -delete && find . -name '*.vue' -type f -delete && find . -name '*.html' -type f -delete && cd ../ && mkdir -p .heroku && cp -r staticfiles_build .heroku/staticfiles"
+    }
   }

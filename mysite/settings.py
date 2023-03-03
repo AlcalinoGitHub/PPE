@@ -126,7 +126,8 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'mysite', 'static'),
-    os.path.join(BASE_DIR, 'mysite', 'static/images')
+    os.path.join(BASE_DIR, 'mysite', 'static/images'),
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 # Default primary key field type
@@ -134,6 +135,6 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 django_heroku.settings(locals())
